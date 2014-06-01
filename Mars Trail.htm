@@ -24,7 +24,7 @@ myState.create = function(){
 myState.update = function(){
    Kiwi.State.prototype.update.call(this);
    if (this.mouse.isDown && this.mars.box.bounds.contains(this.mouse.x, this.mouse.y, true)) {
-		this.message.text = "YOU HAVE DIED OF DYSENTERY";
+		this.message.text = "YOU HAVE DIED OF... DYSENTERY";
 		this.mouse.reset();
    }
 };
