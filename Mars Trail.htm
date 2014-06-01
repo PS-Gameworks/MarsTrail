@@ -1,36 +1,12 @@
 <html>
 <body>
-<script src="kiwi.js"></script>
-<script type="text/javascript">
-
-var game = new Kiwi.Game();
-var myState = new Kiwi.State('myState');
-
-
-myState.preload = function(){
-    Kiwi.State.prototype.preload.call(this);
-  	this.addImage('mars','mars.png');
-	this.mouse = this.game.input.mouse;
-}
-
-myState.create = function(){
-    Kiwi.State.prototype.create.call(this);
-		this.message = new Kiwi.GameObjects.Textfield(this, "You're almost there! Click on Mars to land your ship!", 0, 0);
-		this.mars = new Kiwi.GameObjects.StaticImage(this, this.textures['mars'], 100, 100);
-		this.addChild(this.message);
-		this.addChild(this.mars);
-}
-
-myState.update = function(){
-   Kiwi.State.prototype.update.call(this);
-   if (this.mouse.isDown && this.mars.box.bounds.contains(this.mouse.x, this.mouse.y, true)) {
-		this.message.text = "YOU HAVE DIED OF... DYSENTERY";
-		this.mouse.reset();
-   }
-};
-
-game.states.addState(myState, true);
-
-</script>
+<script src="src/kiwi.js"></script>
+<script src="src/marsloader.js"></script>
+<script src="src/intro.js"></script>
+<script src="src/menu.js"></script>
+<script src="src/gameover.js"></script>
+<script src="src/credits.js"></script>
+<script src="src/travel.js"></script>
+<script src="src/trail.js"></script>
 </body>
 </html>
