@@ -18,7 +18,14 @@ loadState.preload = function(){
     this.addChild(this.logo);
     this.addImage('mars','img/mars.png');
     this.addImage('mars_menu_bg','img/mars_menu_bg.jpg');
-	this.addAudio('bgm', 'snd/asteroid_bummin.mp3');
+    this.addAudio('bgm', 'snd/asteroid_bummin.mp3');
+
+    // intro sprites and background
+    // Help Text: "Sprite Name, Sprite Location, Cell Width, Cell Height"
+    // Personal Note: This will need to change if the sprites are different cell heights and widths.
+    this.addSpriteSheet('basicShipSprites', 'img/sprites/basic_ship_sprites.gif', 39, 43);
+    this.addImage('introBackground', 'img/mars_menu_bg.jpg', true);
+
     this.game.stage.resize(900, 600);
 }
 
