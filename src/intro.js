@@ -1,4 +1,3 @@
-
 var introState = new Kiwi.State('introState');
 
 introState.create = function () {
@@ -23,6 +22,10 @@ introState.create = function () {
     this.addChild(this.introBackground);
     this.addChild(this.message);
     this.addChild(this.ship);
+	
+	//game restarted/started
+	//clear global game logic variables
+	clearedField = false;
 }
 
 introState.update = function () {

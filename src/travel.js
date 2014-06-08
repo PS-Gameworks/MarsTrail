@@ -11,14 +11,21 @@ travelState.create = function(){
 
 travelState.update = function(){
    Kiwi.State.prototype.update.call(this);
-   if (this.mouse.isDown && this.mars.box.bounds.contains(this.mouse.x, this.mouse.y, true)) {
-		this.message.text = "YOU HAVE DIED OF... DYSENTERY";
-		this.mouse.reset();
-		this.game.states.switchState("creditsState");
+   if (this.mouse.isDown && this.mars.box.bounds.contains(this.mouse.x, this.mouse.y, true)) 
+   {
+		if(clearedField)
+		{
+			this.game.states.switchState("creditsState");
+		}
+		else
+		{
+			clearedField = true;
+			this.game.states.switchState("meteorState");
+		}
    }
    else if(this.mouse.isDown)
    {
-		this.mouse.reset();
 		this.game.states.switchState("gameoverState");
    }
+   this.mouse.reset();
 };

@@ -1,6 +1,9 @@
 var loadState = new Kiwi.State('loadState');
 var preloader = new Kiwi.State('preloader');
 
+//game logic variables
+var clearedField = false;
+
 //preload
 preloader.preload = function(){
     Kiwi.State.prototype.preload.call(this);
