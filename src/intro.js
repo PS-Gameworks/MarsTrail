@@ -32,6 +32,6 @@ introState.update = function () {
     Kiwi.State.prototype.update.call(this);
     if (this.mouse.isDown) {
         this.mouse.reset();
-        this.game.states.switchState("menuState");
+        this.game.states.switchState("puzzleState");
     }
 };

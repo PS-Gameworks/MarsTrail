@@ -27,7 +27,10 @@ loadState.preload = function(){
     // Help Text: "Sprite Name, Sprite Location, Cell Width, Cell Height"
     // Personal Note: This will need to change if the sprites are different cell heights and widths.
     this.addSpriteSheet('basicShipSprites', 'img/sprites/basic_ship_sprites.gif', 39, 43);
+	this.addSpriteSheet('pipeSprites', 'img/sprites/64w64h pipes.png', 64, 64); 
+	this.addJSON('puzzleMap', 'lvl/puzzlemap.json');
     this.addImage('introBackground', 'img/mars_menu_bg.jpg', true);
+	this.addImage('puzzleBackground', 'img/puzzle_bg.jpg', true);
 
     this.game.stage.resize(900, 600);
 }

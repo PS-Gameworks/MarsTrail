@@ -1,5 +1,6 @@
 var game = new Kiwi.Game();
 game.states.addState(introState);
+game.states.addState(puzzleState);
 game.states.addState(menuState);
 game.states.addState(gameoverState);
 game.states.addState(creditsState);
