@@ -1,0 +1,10 @@
+/*
+ * Main.css
+ *
+ * Mars Trail
+ */
+
+body { background: url('../Images/MilkyWay.jpg'); background-position: center; margin: 0; }
+
+body div#game { border: 2px solid #888; height: 600px; margin: 100px auto 0 auto; width: 900px; }
+body div#game iframe { height: 100%; width: 100%; }
